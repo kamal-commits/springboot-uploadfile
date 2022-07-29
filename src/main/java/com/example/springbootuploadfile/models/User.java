@@ -1,6 +1,7 @@
 package com.example.springbootuploadfile.models;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import org.springframework.data.annotation.Id;
@@ -11,11 +12,9 @@ import java.util.List;
 
 @Document(collection = "users")
 @Data
+@EqualsAndHashCode(callSuper = false)
 
-public class User {
-
-  @Id
-  private String id;
+public class User extends Base {
 
   private String firstName;
 
